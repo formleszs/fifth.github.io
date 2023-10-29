@@ -10,3 +10,11 @@ function calc() {
     document.getElementById('result').innerHTML = "Стоимость равна: "+ price +" р.";
   }
 }
+function isNumberKey(evt) {
+  var charCode = (evt.which) ? evt.which : event.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    alert("Вы должны использовать цифры.");
+    return false;
+  }
+  return true;
+}
